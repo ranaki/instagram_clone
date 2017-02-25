@@ -12,7 +12,7 @@ class Post extends React.Component {
     return (
       <div className="col s12 m6 offset-m3">
         <div className="card">
-          <h3 className="card-title">{this.refs.name}</h3>
+          <h3 className="card-title">{this.props.name}</h3>
             <div className="card-image">
               <img src={this.props.image}></img>
             </div>

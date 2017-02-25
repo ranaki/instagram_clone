@@ -20,6 +20,16 @@ class Posts extends React.Component {
   ]}
   }
 
+  addBoard = (name) => {
+    $.ajax({
+      url: '/posts',
+      type: 'POST',
+      data: { name }
+    }).done( post => {
+      this.setState({ posts: [...this.state.posts, post] });
+    });
+  }
+
     render() {
       let posts = this.state.posts.map(posts => {
         return (
