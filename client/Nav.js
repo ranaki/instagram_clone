@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../public/stylesheets/style.css';
+import '../public/stylesheets/style.css';
 
 class Nav extends React.Component {
   componentDidMount() {
