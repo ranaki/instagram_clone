@@ -21,7 +21,7 @@ class Post extends React.Component {
                 <i className="fa fa-heart-o" aria-hidden="true"></i>
                 <i className="fa fa-comment-o" aria-hidden="true"></i>
                 <i className="fa fa-paper-plane-o" aria-hidden="true"></i>
-                <i className="right fa fa-bookmark-o" aria-hidden="true"></i>
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
               </div>
               <p>{this.props.description}</p>
             </div>
