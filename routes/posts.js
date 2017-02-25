@@ -18,4 +18,12 @@ router.post('/', (req, res) => {
   });
 });
 
+router.delete('/:id', (req, res) => {
+  let postId = req.params.id;
+  Post.findById(postId, (err, post) => {
+    post.remove();
+    res.status(200).send({success: true});
+  });
+});
+
 module.exports = router

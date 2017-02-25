@@ -30,10 +30,20 @@ class Posts extends React.Component {
     });
   }
 
+  deletePost = (id) => {
+    $.ajax({
+      url: `/posts/${id}`,
+      type: 'DELETE'
+    }).done( () => {
+      this.setState({ posts: this.state.posts.filter( p => p._id !== id ) });
+    });
+  }
+
     render() {
       let posts = this.state.posts.map(post => {
         return (
           <Post
+            deletePost={this.deletePost}
             key={post._id}
            {...post}
           />

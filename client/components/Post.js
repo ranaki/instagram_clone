@@ -21,7 +21,7 @@ class Post extends React.Component {
                 <i className="fa fa-heart-o" aria-hidden="true"></i>
                 <i className="fa fa-comment-o" aria-hidden="true"></i>
                 <i className="fa fa-paper-plane-o" aria-hidden="true"></i>
-                <i className="fa fa-trash-o" aria-hidden="true"></i>
+                <i className="fa fa-trash-o right" aria-hidden="true" onClick={() => this.props.deletePost(this.props._id)}></i>
               </div>
               <p>{this.props.description}</p>
             </div>
