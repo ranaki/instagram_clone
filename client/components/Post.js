@@ -24,6 +24,7 @@ class Post extends React.Component {
                 <i className="fa fa-trash-o right" aria-hidden="true" onClick={() => this.props.deletePost(this.props._id)}></i>
               </div>
               <p>{this.props.description}</p>
+              <input className="comments" type="text" placeholder="Add a Comment"/>
             </div>
           </div>
       </div>

@@ -18,6 +18,7 @@ class Form extends React.Component {
         ref='form'
         onSubmit={this.submitPic}
       >
+      
         <input
           autoFocus={true}
           id="name"

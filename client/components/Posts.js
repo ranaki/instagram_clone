@@ -51,7 +51,7 @@ class Posts extends React.Component {
       });
       return (
         <div>
-          <Form addPicture={this.addPicture} placeholder="Add a picture" />
+          <div className="post-form col s12 m6 offset-m3"><Form addPicture={this.addPicture} placeholder="Add a picture" /></div>
           {posts}
         </div>
       )
