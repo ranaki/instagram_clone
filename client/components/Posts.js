@@ -21,7 +21,7 @@ class Posts extends React.Component {
     render() {
       let posts = this.state.posts.map(posts => {
         return (
-          <Post 
+          <Post
            {...posts}
           />
         )
