@@ -11,7 +11,9 @@ class App extends React.Component {
     return (
       <div>
         <Nav />
-        <Posts />
+        <div className="container">
+          <Posts />
+        </div>
       </div>
     );
   }

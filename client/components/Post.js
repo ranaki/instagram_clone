@@ -7,46 +7,23 @@ class Post extends React.Component {
     this.input;
   }
 
-  toggleEdit = () => {
-    this.setState({ edit: !this.state.edit });
-  }
-
-  showEdit = () => {
-    let { name, updatePost, _id } = this.props;
-    if (this.state.edit) {
-      return (
-        <form
-          onSubmit={ e => {
-            e.preventDefault()
-            updatePost({ _id, name: this.input.value })
-            this.input.value = null;
-            this.toggleEdit()
-          }}
-        >
-          <input defaultValue={name} ref={ (n) => this.input = n } />
-        </form>
-      )
-    } else {
-      return (<span className="card-title">{name}</span>)
-    }
-  }
-
   render() {
-    let { deletePost, _id } = this.props;
+    // let { deletePost, _id } = this.props;
     return (
       <div className="col s12 m4">
-        <div className="card blue-grey darken-1">
-          <div className="card-content white-text">
-            { this.showEdit() }
+        <div className="card">
+            <div className="card-image">
+              <img src="https://images.unsplash.com/uploads/141219200475673afcb68/f5bd8360?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop="></img>
+              <span className="card-title">Card Title</span>
+            </div>
+            <div className="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div className="card-action">
+              <a href="#">This is a link</a>
+            </div>
           </div>
-          <div className="card-action">
-            <a onClick={this.toggleEdit}>
-              { this.state.edit ? 'Cancel' : 'Edit' }
-            </a>
-            <a onClick={ () => deletePost(_id) }>Delete</a>
-            <a href={`/posts/${_id}`}>Show</a>
-          </div>
-        </div>
       </div>
     )
   }
