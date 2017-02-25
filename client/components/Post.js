@@ -13,7 +13,7 @@ class Post extends React.Component {
       <div className="col s12 m6 offset-m3">
         <div className="card">
             <div className="card-image">
-              <img src="{https://images.unsplash.com/uploads/141219200475673afcb68/f5bd8360?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=}"></img>
+              <img src="https://images.unsplash.com/uploads/141219200475673afcb68/f5bd8360?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop="></img>
               <span className="card-title">Surfer</span>
             </div>
             <div className="card-content">
