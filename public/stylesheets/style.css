@@ -43,3 +43,8 @@ a {
     padding-top: 1em;
     padding-left: 1em;
 }
+.icons i {
+    padding: 0 10px;
+    font-size: 1.2em;
+    margin-bottom: 18px;
+}
