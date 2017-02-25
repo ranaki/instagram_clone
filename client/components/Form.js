@@ -19,9 +19,18 @@ class Form extends React.Component {
         break;
     }
   }
+
+  submitPic(e) {
+    e.preventDefault();
+    this.props.add(this.state.name, this.state.description, this.state.image);
+    
+  }
+
   render() {
     return (
-      <form>
+      <form
+        onSubmit={(e) => this.submitPic(e)}
+      >
         <input
           id="name"
           placeholder="Name"
@@ -44,6 +53,7 @@ class Form extends React.Component {
           onChange={(e) => this.handleFormChange(e)}
           required
         />
+        <button className="btn">Submit</button>
       </form>
     )
   }

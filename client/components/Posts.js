@@ -21,11 +21,11 @@ class Posts extends React.Component {
   ]}
   }
 
-  addPicture = (name) => {
+  addPicture = (name, description, image) => {
     $.ajax({
       url: '/posts',
       type: 'POST',
-      data: { name }
+      data: { name, description, image }
     }).done( post => {
       this.setState({ posts: [...this.state.posts, post] });
     });

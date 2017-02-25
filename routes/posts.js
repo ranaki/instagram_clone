@@ -7,3 +7,15 @@ router.get('/', (req, res) => {
     res.json(posts);
   });
 });
+
+router.post('/', (req, res) => {
+  new Post({
+    name: req.body.name,
+    description: req.body.description,
+    image: req.body.image
+  }).save( (err, post) => {
+    res.json(post);
+  });
+});
+
+module.exports = router
