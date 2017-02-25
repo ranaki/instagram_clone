@@ -26,7 +26,7 @@ class Posts extends React.Component {
       type: 'POST',
       data: { name, description, image }
     }).done( post => {
-      this.setState({ posts: [...this.state.posts, post] });
+      this.setState({ posts: [post, ...this.state.posts ] });
     });
   }
 
