@@ -2,6 +2,7 @@
 html {
   background-color: #fafafa;
 }
+
 a {
   color: #00B7FF;
 }
@@ -36,12 +37,16 @@ a {
 .input-field .search {
   background-image: url(<i class="fa fa-search" aria-hidden="true"></i>)
 }
-
+.card {
+      border: .5px solid #c5c5c5;
+}
 .card .card-title {
     font-size: 20px;
     font-weight: 400;
-    padding-top: 1em;
     padding-left: 1em;
+}
+.card .card-content p {
+    font-weight: 300;
 }
 .icons i {
     padding: 0 10px;
@@ -51,4 +56,19 @@ a {
 i.fa.fa-ellipsis-h {
     padding-right: 1em;
     color: gray;
+}
+#logo-icon {
+    max-width: 60px;
+    padding-right: 29px;
+}
+#wordmark {
+    border-left: 1px solid;
+    padding-left: 28px;
+    width: 127px;
+}
+.header-row {
+    padding-top: 9px;
+}
+.header-row i {
+    font-size: 25px;
 }
