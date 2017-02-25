@@ -36,3 +36,10 @@ a {
 .input-field .search {
   background-image: url(<i class="fa fa-search" aria-hidden="true"></i>)
 }
+
+.card .card-title {
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 1em;
+    padding-left: 1em;
+}
