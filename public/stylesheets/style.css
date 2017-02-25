@@ -1,3 +1,38 @@
+
+html {
+  background-color: #fafafa;
+}
 a {
   color: #00B7FF;
+}
+.nav-wrapper {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  color: #262626;
+}
+
+/*.fa-instagram {
+  width: 10% !IMPORTANT;
+  padding-right: 20%;
+  border-right: 1px solid black;
+}*/
+
+/*.tight {
+  height: 35px;
+}*/
+
+.input-field {
+  border: 1px solid #dbdbdb !IMPORTANT;
+  border-radius: 5px !IMPORTANT;
+  height: 27px !IMPORTANT;
+  background-color: #fafafa;
+}
+.input-field::-webkit-input-placeholder {
+  text-align: center;
+  color: #999;
+}
+
+.input-field .search {
+  background-image: url(<i class="fa fa-search" aria-hidden="true"></i>)
 }
