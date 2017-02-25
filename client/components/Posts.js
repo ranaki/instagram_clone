@@ -60,5 +60,5 @@ updatePost = (post) => {
         )
       });
     }
-
+}
 export default Posts;
