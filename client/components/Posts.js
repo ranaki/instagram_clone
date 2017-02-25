@@ -1,5 +1,6 @@
 import React from 'react';
 import Post from "./Post";
+import Form from "./Form";
 
 class Posts extends React.Component {
   constructor(props){
@@ -41,6 +42,7 @@ class Posts extends React.Component {
       return (
         <div>
           <Form add={this.addPicture} placeholder="Add a picture" />
+          {posts}
         </div>
       )
     }

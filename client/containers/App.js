@@ -16,7 +16,6 @@ class App extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col m6 offset-m3">
-              <Form />
             </div>
             <Posts />
           </div>
