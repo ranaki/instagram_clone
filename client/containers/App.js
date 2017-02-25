@@ -4,6 +4,7 @@ import Posts from '../components/Posts';
 import Form from '../components/Form';
 
 class App extends React.Component {
+
   componentDidMount() {
     $(".button-collapse").sideNav();
   }
