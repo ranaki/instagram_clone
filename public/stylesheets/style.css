@@ -48,3 +48,7 @@ a {
     font-size: 1.2em;
     margin-bottom: 18px;
 }
+i.fa.fa-ellipsis-h {
+    padding-right: 1em;
+    color: gray;
+}
