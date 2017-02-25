@@ -20,7 +20,7 @@ class Posts extends React.Component {
   ]}
   }
 
-  addBoard = (name) => {
+  addPicture = (name) => {
     $.ajax({
       url: '/posts',
       type: 'POST',
@@ -40,7 +40,7 @@ class Posts extends React.Component {
       });
       return (
         <div>
-          {posts}
+          <Form add={this.addPicture} placeholder="Add a picture" />
         </div>
       )
     }
