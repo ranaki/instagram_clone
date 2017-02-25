@@ -4,7 +4,7 @@ const Post = require('../models/post');
 
 router.get('/', (req, res) => {
   Post.find( ( err, posts ) => {
-    res.json(posts);
+    res.send(posts);
   });
 });
 
@@ -14,7 +14,7 @@ router.post('/', (req, res) => {
     description: req.body.description,
     image: req.body.image
   }).save( (err, post) => {
-    res.json(post);
+    res.send(post);
   });
 });
 

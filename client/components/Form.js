@@ -2,58 +2,42 @@ import React from "react";
 
 class Form extends React.Component {
   constructor(props) {
-    super(props)
-    this.state = {name:'', description:'', image:''}
+    super(props);
   }
 
-  handleFormChange(e) {
-    switch(e.target.id) {
-      case 'name':
-        this.setState({name: e.target.value})
-        break;
-      case 'description':
-        this.setState({description: e.target.value})
-        break;
-      case 'image':
-        this.setState({image: e.target.value})
-        break;
-    }
-  }
-
-  submitPic(e) {
+  submitPic = (e) => {
     e.preventDefault();
-    this.props.add(this.state.name, this.state.description, this.state.image);
-    
+    this.props.addPicture(this.refs.name.value, this.refs.description.value, this.refs.image.value);
+    this.refs.form.reset();
+    this.refs.name.focus();
   }
 
   render() {
     return (
       <form
-        onSubmit={(e) => this.submitPic(e)}
+        ref='form'
+        onSubmit={this.submitPic}
       >
         <input
+          autoFocus={true}
           id="name"
           placeholder="Name"
-          value={this.state.name}
-          onChange={(e) => this.handleFormChange(e)}
+          ref='name'
           required
-
         />
         <input
           id="description"
           placeholder="Description"
-          value={this.state.description}
-          onChange={(e) => this.handleFormChange(e)}
+          ref='description'
           required
         />
         <input
           id="image"
           placeholder="Image"
-          value={this.state.image}
-          onChange={(e) => this.handleFormChange(e)}
+          ref='image'
           required
         />
-        <button className="btn">Submit</button>
+        <input type='submit' className="btn" />
       </form>
     )
   }
